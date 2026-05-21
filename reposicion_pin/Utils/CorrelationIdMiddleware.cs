@@ -1,0 +1,36 @@
+﻿using Microsoft.Extensions.Options;
+using Serilog.Context;
+
+namespace reposicion_pin.Utils
+{
+    public class CorrelationIdOptions
+    {
+        public string Header { get; set; } = "X-Correlation-Id";
+        public bool IncludeInResponse { get; set; } = true;
+    }
+
+    public class CorrelationIdMiddleware(RequestDelegate next, IOptions<CorrelationIdOptions> options)
+    {
+        public async Task InvokeAsync(HttpContext context)
+        {
+            if (!context.Request.Headers.TryGetValue(options.Value.Header, out var correlationId))
+            {
+                correlationId = Guid.NewGuid().ToString();
+            }
+            if (options.Value.IncludeInResponse)
+            {
+                context.Response.Headers.TryAdd(options.Value.Header, correlationId);
+            }
+            using (LogContext.PushProperty("CorrelationId", correlationId.ToString()))
+            {
+                await next(context);
+            }
+        }
+    }
+
+    public static class CorrelationIdExtensions
+    {
+        public static IApplicationBuilder UseCorrelationId(this IApplicationBuilder app)
+            => app.UseMiddleware<CorrelationIdMiddleware>();
+    }
+}

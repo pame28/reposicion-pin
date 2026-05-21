@@ -1,0 +1,6 @@
+@plantilla_microservicios_repository_HostAddress = http://localhost:5260
+
+GET {{plantilla_microservicios_repository_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

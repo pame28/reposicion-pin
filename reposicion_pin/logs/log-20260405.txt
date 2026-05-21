@@ -1,0 +1,1139 @@
+05-04-2026 20:02:54.595 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+05-04-2026 20:02:54.830 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+05-04-2026 20:02:55.141 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+05-04-2026 20:02:55.158 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+05-04-2026 20:02:55.176 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin
+05-04-2026 20:02:59.725 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger - null null
+05-04-2026 20:03:03.903 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger - 301 null null 4261.0223ms
+05-04-2026 20:03:03.999 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+05-04-2026 20:03:06.681 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/swagger-ui.css - null null
+05-04-2026 20:03:06.809 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/swagger-ui-bundle.js - null null
+05-04-2026 20:03:06.810 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/swagger-ui-standalone-preset.js - null null
+05-04-2026 20:03:06.913 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+05-04-2026 20:03:07.123 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+05-04-2026 20:03:07.221 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 3220.4578ms
+05-04-2026 20:03:07.883 [19] [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+05-04-2026 20:03:07.959 [20] [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+05-04-2026 20:03:07.798 [21] [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+05-04-2026 20:03:08.070 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 947.3327ms
+05-04-2026 20:03:08.145 [19] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 1336.7853ms
+05-04-2026 20:03:08.200 [20] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 1391.8135ms
+05-04-2026 20:03:08.259 [21] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/swagger-ui.css - 200 152034 text/css 1578.0325ms
+05-04-2026 20:03:08.476 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1563.1126ms
+05-04-2026 20:03:09.287 [21] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+05-04-2026 20:03:09.410 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/favicon-32x32.png - null null
+05-04-2026 20:03:09.568 [21] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 281.1884ms
+05-04-2026 20:03:09.589 [17] [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+05-04-2026 20:03:10.001 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/favicon-32x32.png - 200 628 image/png 590.4256ms
+05-04-2026 20:05:13.031 [3] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 20:05:13.049 [3] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 20:05:13.127 [3] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 20:05:16.219 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (130ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 20:05:16.665 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 20:05:17.036 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 20:05:17.111 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 20:05:17.636 [24] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (267ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 20:05:17.866 [24] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 20:05:17.933 [24] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (57ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 20:05:20.983 [3] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 20:05:21.253 [3] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 20:05:21.323 [24] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 20:05:22.055 [3] [Error] reposicion_pin.Repository.EnvioEmailRepository - Error enviando correo Ref:1775441121339 Destino:pamelas@banpais.hn
+System.Net.Mail.SmtpException: Command parameter not implemented. The server response was: 5.5.2 <80730-BP1>: Helo command rejected: need fully-qualified hostname
+   at System.Net.Mail.RecipientCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.RecipientCommand.SendAsync[TIOAdapter](SmtpConnection conn, String to, CancellationToken cancellationToken)
+   at System.Net.Mail.SmtpTransport.SendMailAsync[TIOAdapter](MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, CancellationToken cancellationToken)
+   at System.Net.Mail.SmtpClient.SendAsyncInternal[TIOAdapter](MailMessage message, Boolean invokeSendCompleted, Object userToken, Boolean forceWrapExceptions, CancellationToken cancellationToken)
+   at System.Net.Mail.SmtpClient.<SendMailAsync>g__WaitAndRethrowIfNeeded|75_0(Task`1 task)
+   at reposicion_pin.Repository.EnvioEmailRepository.EnviarCorreoAsync(String correoDestino, String cuerpoBase, String pin, String referencia, CancellationToken cancellationToken) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin\Repository\EnvioEmailRepository.cs:line 126
+05-04-2026 20:05:22.544 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (102ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+05-04-2026 20:05:22.676 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 20:05:22.702 [3] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 20:05:22.725 [3] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 9587.9111ms
+05-04-2026 20:05:22.733 [3] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 20:05:22.751 [3] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 9719.714ms
+05-04-2026 20:06:10.310 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 20:06:10.348 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 20:06:10.350 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 20:06:10.460 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 20:06:10.515 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 20:06:10.577 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 20:06:10.634 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 20:06:10.702 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (59ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 20:06:10.764 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 20:06:10.838 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 20:06:11.744 [16] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 20:06:11.882 [16] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 20:06:11.961 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (68ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 20:06:39.679 [25] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1775441171969 Destino:pamelas@banpais.hn
+05-04-2026 20:06:39.739 [25] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+05-04-2026 20:06:39.748 [25] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 20:06:39.751 [25] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 29397.2182ms
+05-04-2026 20:06:39.764 [25] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 20:06:39.772 [25] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 29464.2405ms
+05-04-2026 20:17:59.245 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+05-04-2026 20:17:59.504 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+05-04-2026 20:17:59.842 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+05-04-2026 20:17:59.873 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+05-04-2026 20:17:59.897 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin
+05-04-2026 20:18:02.893 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+05-04-2026 20:18:06.018 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+05-04-2026 20:18:06.018 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+05-04-2026 20:18:06.104 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 3240.2417ms
+05-04-2026 20:18:06.463 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 450.106ms
+05-04-2026 20:18:06.632 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 619.459ms
+05-04-2026 20:18:06.795 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+05-04-2026 20:18:07.282 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 487.0232ms
+05-04-2026 20:18:38.941 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+05-04-2026 20:18:39.473 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+05-04-2026 20:18:40.436 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+05-04-2026 20:18:40.555 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+05-04-2026 20:18:40.674 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin
+05-04-2026 20:18:43.370 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+05-04-2026 20:18:45.529 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+05-04-2026 20:18:45.529 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+05-04-2026 20:18:45.606 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 2262.3897ms
+05-04-2026 20:18:45.753 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 225.2607ms
+05-04-2026 20:18:46.183 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 653.661ms
+05-04-2026 20:18:46.371 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+05-04-2026 20:18:46.610 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 239.1847ms
+05-04-2026 20:19:00.076 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 20:19:00.146 [10] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 20:19:00.282 [10] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 20:19:04.365 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (112ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 20:19:04.811 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 20:19:05.206 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 20:19:05.334 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 20:19:05.739 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (152ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 20:19:06.020 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 20:19:06.091 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 20:19:08.457 [16] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 20:19:08.578 [16] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 20:19:08.641 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 20:19:36.063 [10] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1775441948658 Destino:pamelas@banpais.hn
+05-04-2026 20:19:36.461 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (53ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+05-04-2026 20:19:36.540 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 20:19:36.564 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 36260.304ms
+05-04-2026 20:19:36.571 [16] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 20:19:36.590 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 36512.7393ms
+05-04-2026 20:21:04.975 [3] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 20:21:04.988 [3] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 20:21:04.992 [3] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 20:21:05.081 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 20:21:05.138 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 20:21:05.198 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 20:21:05.261 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 20:21:05.332 [24] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 20:21:05.390 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 20:21:05.459 [24] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 20:21:07.161 [24] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 20:21:07.299 [24] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 20:21:07.362 [24] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 20:21:34.736 [24] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1775442067374 Destino:pamelas@banpais.hn
+05-04-2026 20:21:34.799 [3] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+05-04-2026 20:21:34.807 [3] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 20:21:34.813 [3] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 29813.7689ms
+05-04-2026 20:21:34.821 [3] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 20:21:34.825 [3] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 29853.3685ms
+05-04-2026 20:34:02.463 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+05-04-2026 20:34:03.011 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+05-04-2026 20:34:04.104 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+05-04-2026 20:34:04.517 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+05-04-2026 20:34:04.570 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin
+05-04-2026 20:34:06.773 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+05-04-2026 20:34:09.379 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+05-04-2026 20:34:09.379 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+05-04-2026 20:34:09.406 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 2676.421ms
+05-04-2026 20:34:09.561 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 181.8032ms
+05-04-2026 20:34:09.769 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 390.5559ms
+05-04-2026 20:34:09.960 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+05-04-2026 20:34:10.149 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 189.3208ms
+05-04-2026 20:34:22.238 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 20:34:22.332 [7] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 20:34:22.451 [7] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 20:34:26.661 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (122ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 20:34:27.146 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 20:34:27.527 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 20:34:27.639 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 20:34:28.047 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (157ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 20:34:28.336 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 20:34:28.411 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (57ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 20:34:30.703 [16] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 20:34:30.819 [16] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 20:34:30.882 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 20:34:58.527 [21] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1775442870896 Destino:pamelas@banpais.hn
+05-04-2026 20:34:58.839 [21] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (59ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+05-04-2026 20:34:58.903 [21] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 20:34:58.924 [21] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 36451.049ms
+05-04-2026 20:34:58.930 [21] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 20:34:58.953 [21] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 36716.8947ms
+05-04-2026 20:59:46.338 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+05-04-2026 20:59:47.057 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+05-04-2026 20:59:48.001 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+05-04-2026 20:59:48.072 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+05-04-2026 20:59:48.093 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin
+05-04-2026 20:59:52.330 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+05-04-2026 20:59:59.010 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+05-04-2026 20:59:59.011 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+05-04-2026 20:59:59.216 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 6960.3682ms
+05-04-2026 20:59:59.951 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 930.0467ms
+05-04-2026 21:00:00.937 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 2006.5405ms
+05-04-2026 21:00:01.220 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+05-04-2026 21:00:02.796 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 1582.5329ms
+05-04-2026 21:00:24.896 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 21:00:24.958 [16] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 21:00:25.118 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 21:01:22.827 [16] [Error] Microsoft.EntityFrameworkCore.Database.Connection - An error occurred using the connection to database 'ReposicionPinTC' on server 'PCI-THBE01DE'.
+05-04-2026 21:01:24.514 [16] [Error] Microsoft.EntityFrameworkCore.Query - An exception occurred while iterating over the results of a query for context type 'reposicion_pin.Infrastructure.Data.AppDbContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (64): El nombre de red especificado ya no está disponible.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 taskCompletionSource, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:64,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.MoveNext()
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+ ---> System.ComponentModel.Win32Exception (64): El nombre de red especificado ya no está disponible.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, TimeoutTimer timeout, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, IDbConnectionPool pool, Func`3 accessTokenCallback)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionPoolGroupProviderInfo poolGroupProviderInfo, IDbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(IDbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.SqlClient.ConnectionPool.WaitHandleDbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 taskCompletionSource, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:64,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.Enumerator.MoveNext()
+05-04-2026 21:03:08.802 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+05-04-2026 21:03:09.397 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+05-04-2026 21:03:12.775 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+05-04-2026 21:03:20.385 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+05-04-2026 21:03:20.515 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+05-04-2026 21:03:20.639 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin
+05-04-2026 21:03:22.834 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 10171.4525ms
+05-04-2026 21:03:22.895 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+05-04-2026 21:03:22.897 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+05-04-2026 21:03:23.633 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 738.6956ms
+05-04-2026 21:03:42.874 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19977.6568ms
+05-04-2026 21:03:44.837 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+05-04-2026 21:03:44.927 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 90.6258ms
+05-04-2026 21:04:04.511 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 21:04:04.641 [7] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 21:04:04.883 [7] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 21:04:17.347 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (167ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 21:04:18.791 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 21:04:19.728 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 21:04:19.879 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 21:04:21.791 [13] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (92ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 21:04:22.594 [13] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (78ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 21:04:22.741 [13] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (86ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 21:04:27.850 [13] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 21:04:28.044 [13] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 21:04:28.139 [13] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 21:04:28.200 [13] [Information] reposicion_pin.Repository.EnvioSmsRepository - MensajeFinal: BANPAIS: Tu numero de PIN es 1721. Personalizalo en un Cajero Banpais seleccionando la opción: Cambio de PIN.
+05-04-2026 21:04:51.846 [13] [Error] reposicion_pin.Repository.EnvioSmsRepository - Error enviando SMS Ref:1775444668190
+System.ServiceModel.CommunicationException: Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder. (bimoviladmqa.bi.com.gt:443)
+ ---> System.Net.Http.HttpRequestException: Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder. (bimoviladmqa.bi.com.gt:443)
+ ---> System.Net.Sockets.SocketException (10060): Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpClientRequestChannel.HttpClientChannelAsyncRequest.SendRequestAsync(Message message, TimeoutHelper timeoutHelper)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(HttpRequestException requestException, HttpRequestMessage request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpClientRequestChannel.HttpClientChannelAsyncRequest.SendRequestAsync(Message message, TimeoutHelper timeoutHelper)
+   at System.ServiceModel.Channels.RequestChannel.RequestAsync(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.RequestAsyncInternal(Message message, TimeSpan timeout)
+   at System.Runtime.TaskHelpers.ToApmEnd[TResult](IAsyncResult iar)
+   at System.ServiceModel.Channels.RequestChannel.EndRequest(IAsyncResult result)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.EndRequest(IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.FinishSend(IAsyncResult result, Boolean completedSynchronously)
+--- End of stack trace from previous location ---
+   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location ---
+   at reposicion_pin.Repository.EnvioSmsRepository.EnviarSmsDirectoAsync(String telefono, String operador, String pin, String referencia, CancellationToken cancellationToken) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin\Repository\EnvioSmsRepository.cs:line 110
+05-04-2026 21:04:52.409 [13] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime2), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioSms] ([Celular], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [NumeroTarjeta], [Referencia], [Sms], [Telco])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+05-04-2026 21:04:52.553 [13] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 21:04:52.604 [13] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 21:04:52.636 [13] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 47697.2366ms
+05-04-2026 21:04:52.650 [13] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 21:04:52.682 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 48171.8415ms
+05-04-2026 22:32:03.100 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+05-04-2026 22:32:03.159 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+05-04-2026 22:32:03.236 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+05-04-2026 22:32:03.238 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+05-04-2026 22:32:03.241 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin
+05-04-2026 22:32:04.368 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+05-04-2026 22:32:04.924 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+05-04-2026 22:32:04.924 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 565.5706ms
+05-04-2026 22:32:04.927 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+05-04-2026 22:32:04.942 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 18.2083ms
+05-04-2026 22:32:05.018 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.6743ms
+05-04-2026 22:32:05.076 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+05-04-2026 22:32:05.102 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.1576ms
+05-04-2026 22:32:24.628 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 22:32:24.653 [14] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 22:32:24.720 [14] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 22:32:27.800 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (111ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 22:32:28.347 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (265ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 22:32:28.714 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (146ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 22:32:28.898 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (81ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 22:32:29.240 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (154ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 22:32:29.508 [19] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (84ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 22:32:29.709 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (188ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 22:32:33.064 [19] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 22:32:33.257 [19] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 22:32:33.345 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (79ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 22:32:39.689 [17] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1775449953357 Destino:pamelas@banpais.hn
+05-04-2026 22:32:40.218 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (192ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+05-04-2026 22:32:40.297 [14] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 22:32:40.323 [14] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 15587.5004ms
+05-04-2026 22:32:40.328 [14] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 22:32:40.352 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 15724.0259ms
+05-04-2026 22:48:59.840 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+05-04-2026 22:49:00.178 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+05-04-2026 22:49:00.526 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+05-04-2026 22:49:00.550 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+05-04-2026 22:49:00.569 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin
+05-04-2026 22:49:02.807 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+05-04-2026 22:49:05.656 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 2878.8683ms
+05-04-2026 22:49:05.829 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+05-04-2026 22:49:05.830 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+05-04-2026 22:49:05.932 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 103.032ms
+05-04-2026 22:49:06.148 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 318.5707ms
+05-04-2026 22:49:06.263 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+05-04-2026 22:49:06.339 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 75.6521ms
+05-04-2026 22:49:25.722 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 22:49:25.737 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 22:49:25.780 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 22:49:28.329 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (94ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 22:49:28.644 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 22:49:28.900 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 22:49:29.008 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 22:49:29.321 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (125ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 22:49:29.545 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 22:49:29.617 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 22:49:31.973 [18] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 22:49:32.115 [18] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 22:49:32.186 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 22:49:38.555 [18] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1775450972197 Destino:pamelas@banpais.hn
+05-04-2026 22:49:39.057 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (165ms) [Parameters=[@p0='?' (Size = -1), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+05-04-2026 22:49:39.191 [18] [Error] Microsoft.EntityFrameworkCore.Update - An exception occurred in the database while saving changes for context type 'reposicion_pin.Infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Correo'. Truncated value: '<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:off'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:9c67609d-43e5-4326-bb32-58866c93d86c
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Correo'. Truncated value: '<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:off'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:9c67609d-43e5-4326-bb32-58866c93d86c
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+05-04-2026 22:49:39.506 [18] [Error] reposicion_pin.Service.NotificacionService - Error registrando resultado Email
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Correo'. Truncated value: '<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:off'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:9c67609d-43e5-4326-bb32-58866c93d86c
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at reposicion_pin.Repository.BandejaEnvioEmailRepository.AddAsync(BandejaEnvioEmailModel entity) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin\Repository\BandejaEnvioEmailRepository.cs:line 30
+   at reposicion_pin.Service.NotificacionService.InsertarRegistroEnvioEmailAsync(TarjetaModel tarjeta, ReposicionPinRequestDto request, String referencia, Int32 codigo, String mensaje, String mailFrom, String mailSubject, String cuerpoCorreo) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin\Service\NotificacionService.cs:line 168
+05-04-2026 22:49:39.572 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 22:49:39.594 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 13801.4899ms
+05-04-2026 22:49:39.598 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 22:49:39.619 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 13896.6648ms
+05-04-2026 22:51:20.796 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+05-04-2026 22:51:21.050 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+05-04-2026 22:51:21.359 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+05-04-2026 22:51:21.370 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+05-04-2026 22:51:21.394 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin
+05-04-2026 22:51:23.631 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+05-04-2026 22:51:26.496 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+05-04-2026 22:51:26.496 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+05-04-2026 22:51:26.542 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 2954.0598ms
+05-04-2026 22:51:26.674 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 178.6819ms
+05-04-2026 22:51:27.095 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 599.5722ms
+05-04-2026 22:51:27.219 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+05-04-2026 22:51:27.498 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 281.601ms
+05-04-2026 22:51:34.903 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 22:51:34.937 [9] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 22:51:35.058 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 22:51:39.354 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (108ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 22:51:39.769 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 22:51:40.096 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 22:51:40.209 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 22:51:40.555 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (131ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 22:51:40.786 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 22:51:40.865 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (64ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 22:51:43.317 [16] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 22:51:43.436 [16] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 22:51:43.501 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (53ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 22:51:49.413 [16] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1775451103513 Destino:pamelas@banpais.hn
+05-04-2026 22:51:49.925 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (155ms) [Parameters=[@p0='?' (Size = -1), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+05-04-2026 22:51:50.015 [20] [Error] Microsoft.EntityFrameworkCore.Update - An exception occurred in the database while saving changes for context type 'reposicion_pin.Infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Correo'. Truncated value: '<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:off'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:2762c44f-0b3a-4fe3-89b2-e83395882c66
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Correo'. Truncated value: '<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:off'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:2762c44f-0b3a-4fe3-89b2-e83395882c66
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+05-04-2026 22:51:50.123 [20] [Error] reposicion_pin.Service.NotificacionService - Error registrando resultado Email
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Correo'. Truncated value: '<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:off'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:2762c44f-0b3a-4fe3-89b2-e83395882c66
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at reposicion_pin.Repository.BandejaEnvioEmailRepository.AddAsync(BandejaEnvioEmailModel entity) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin\Repository\BandejaEnvioEmailRepository.cs:line 30
+   at reposicion_pin.Service.NotificacionService.InsertarRegistroEnvioEmailAsync(TarjetaModel tarjeta, ReposicionPinRequestDto request, String referencia, Int32 codigo, String mensaje, String mailFrom, String mailSubject, String cuerpoCorreo) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin\Service\NotificacionService.cs:line 168
+05-04-2026 22:51:50.170 [20] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 22:51:50.188 [20] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 15108.8478ms
+05-04-2026 22:51:50.193 [20] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 22:51:50.212 [20] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 15309.285ms
+05-04-2026 22:52:43.577 [22] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 22:52:43.584 [22] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 22:52:43.587 [22] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 22:52:43.661 [22] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 22:52:43.720 [22] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 22:52:43.778 [22] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 22:52:43.837 [22] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 22:52:43.907 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 22:52:43.964 [22] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 22:52:44.030 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (58ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 22:52:44.935 [22] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 22:52:45.072 [22] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 22:52:45.131 [22] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 22:53:12.546 [22] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1775451165140 Destino:pamelas@banpais.hn
+05-04-2026 22:53:35.097 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (53ms) [Parameters=[@p0='?' (Size = -1), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+05-04-2026 22:53:35.108 [20] [Error] Microsoft.EntityFrameworkCore.Update - An exception occurred in the database while saving changes for context type 'reposicion_pin.Infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Correo'. Truncated value: '<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:off'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:2762c44f-0b3a-4fe3-89b2-e83395882c66
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Correo'. Truncated value: '<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:off'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:2762c44f-0b3a-4fe3-89b2-e83395882c66
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+05-04-2026 22:53:35.190 [20] [Error] reposicion_pin.Service.NotificacionService - Error registrando resultado Email
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Correo'. Truncated value: '<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:off'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:2762c44f-0b3a-4fe3-89b2-e83395882c66
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at reposicion_pin.Repository.BandejaEnvioEmailRepository.AddAsync(BandejaEnvioEmailModel entity) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin\Repository\BandejaEnvioEmailRepository.cs:line 30
+   at reposicion_pin.Service.NotificacionService.InsertarRegistroEnvioEmailAsync(TarjetaModel tarjeta, ReposicionPinRequestDto request, String referencia, Int32 codigo, String mensaje, String mailFrom, String mailSubject, String cuerpoCorreo) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin\Service\NotificacionService.cs:line 168
+05-04-2026 22:54:02.286 [20] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 22:54:04.203 [20] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 80612.1181ms
+05-04-2026 22:54:04.209 [20] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 22:54:04.214 [20] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 80635.742ms
+05-04-2026 23:00:59.379 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+05-04-2026 23:00:59.625 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+05-04-2026 23:00:59.926 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+05-04-2026 23:00:59.937 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+05-04-2026 23:00:59.944 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\api_reposicion_pin\reposicion_pin
+05-04-2026 23:01:02.583 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+05-04-2026 23:01:06.526 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+05-04-2026 23:01:06.543 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 4049.4762ms
+05-04-2026 23:01:06.527 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+05-04-2026 23:01:06.776 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 249.6776ms
+05-04-2026 23:01:07.180 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 653.8111ms
+05-04-2026 23:01:07.339 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+05-04-2026 23:01:07.710 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 369.7948ms
+05-04-2026 23:01:16.371 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 23:01:16.416 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 23:01:16.496 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 23:01:20.152 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (104ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 23:01:20.555 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 23:01:20.840 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 23:01:20.950 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 23:01:21.316 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (150ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 23:01:21.571 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 23:01:21.645 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 23:01:23.861 [7] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 23:01:23.982 [7] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 23:01:24.045 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 23:01:51.164 [16] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1775451684061 Destino:pamelas@banpais.hn
+05-04-2026 23:01:55.139 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (153ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = -1), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+05-04-2026 23:01:55.235 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 23:01:55.265 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 38749.4054ms
+05-04-2026 23:01:55.275 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 23:01:55.300 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 38928.6032ms
+05-04-2026 23:03:05.566 [23] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 23:03:05.573 [23] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 23:03:05.577 [23] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 23:03:05.656 [23] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 23:03:05.710 [23] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 23:03:05.772 [23] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 23:03:05.826 [23] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 23:03:05.893 [23] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 23:03:05.953 [23] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 23:03:06.019 [23] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (61ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 23:03:07.684 [26] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 23:03:07.795 [26] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 23:03:07.851 [23] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 23:03:34.899 [26] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1775451787858 Destino:pamelas@banpais.hn
+05-04-2026 23:03:40.619 [25] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = -1), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+05-04-2026 23:04:18.862 [25] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+05-04-2026 23:04:22.227 [25] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 76643.7675ms
+05-04-2026 23:04:22.233 [25] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 23:04:22.237 [25] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/reposicion-pin - 200 null application/json; charset=utf-8 76671.1924ms
+05-04-2026 23:06:19.943 [28] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/reposicion-pin - application/json 1121
+05-04-2026 23:06:19.951 [28] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+05-04-2026 23:06:19.954 [28] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+05-04-2026 23:06:20.155 [28] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+05-04-2026 23:06:20.216 [28] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 23:06:20.287 [28] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+05-04-2026 23:06:20.339 [28] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+05-04-2026 23:06:20.411 [24] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (64ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 23:06:20.468 [24] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 23:06:20.532 [28] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (59ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+05-04-2026 23:06:22.246 [28] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+05-04-2026 23:06:22.384 [28] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130****                                                     
+05-04-2026 23:06:22.436 [24] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+05-04-2026 23:06:49.385 [27] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1775451982440 Destino:pamelas@banpais.hn
+05-04-2026 23:07:37.866 [27] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (58ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = -1), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);

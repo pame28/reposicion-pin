@@ -1,0 +1,1397 @@
+23-02-2026 00:01:22.484 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 00:01:22.601 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 00:01:22.948 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 00:01:22.973 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 00:01:22.995 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 00:01:23.530 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 00:01:24.616 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 00:01:24.616 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 00:01:24.616 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 1099.5429ms
+23-02-2026 00:01:24.701 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 84.9819ms
+23-02-2026 00:01:24.768 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 152.6763ms
+23-02-2026 00:01:24.832 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 00:01:24.863 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.4474ms
+23-02-2026 00:01:36.562 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 00:01:36.610 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:01:36.718 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 00:01:43.216 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (185ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 00:01:44.302 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:01:45.482 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 00:01:45.549 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:01:46.282 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (273ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:01:46.482 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:01:46.566 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (64ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:03:14.254 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 00:03:14.387 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 00:03:14.585 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 00:03:14.592 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 00:03:14.599 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 00:03:15.228 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 00:03:16.208 [11] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 1014.2853ms
+23-02-2026 00:03:16.245 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 00:03:16.245 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 00:03:16.325 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 79.9639ms
+23-02-2026 00:03:16.412 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 167.5379ms
+23-02-2026 00:03:16.483 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 00:03:16.512 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.4026ms
+23-02-2026 00:03:23.244 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 00:03:23.515 [9] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:03:23.812 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 00:03:28.649 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (121ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 00:03:29.128 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:03:29.666 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 00:03:29.735 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:03:30.222 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (147ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:03:30.408 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (66ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:03:30.501 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (59ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:03:44.468 [18] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400 >>>[100000000170446820271130                                                         ]<<< Longitud:81
+23-02-2026 00:04:09.224 [18] [Error] reposicion_pin.Repository.AS400Repository - Error ODBC AS400
+System.Data.Odbc.OdbcException (0x80131937): ERROR [42S02] [IBM][Controlador ODBC de System i Access][DB2 para i5/OS]SQL0204 - REIMQ07RC en *N de tipo *N no encontrado.
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, SQLRETURN retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteNonQuery()
+   at System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at reposicion_pin.Repository.AS400Repository.EjecutarProgramaAsync(AS400RequestDto request) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin\Repository\AS400Repository.cs:line 53
+23-02-2026 00:04:09.356 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:04:09.400 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 00:04:09.439 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 45601.4649ms
+23-02-2026 00:04:09.451 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:04:09.488 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 200 null application/json; charset=utf-8 46244.066ms
+23-02-2026 00:04:16.934 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 00:04:16.948 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:04:16.955 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 00:04:17.027 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 00:04:17.087 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:04:17.151 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 00:04:17.206 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:04:17.274 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (57ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:04:17.334 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:04:17.454 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:04:26.081 [18] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400 >>>[100000000170446820271130                                                         ]<<< Longitud:81
+23-02-2026 00:07:53.673 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 00:07:53.828 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 00:07:53.996 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 00:07:54.006 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 00:07:54.012 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 00:07:54.522 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 00:07:55.501 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 998.7813ms
+23-02-2026 00:07:55.504 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 00:07:55.504 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 00:07:55.544 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 40.5412ms
+23-02-2026 00:07:55.618 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 114.6292ms
+23-02-2026 00:07:55.678 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 00:07:55.705 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.542ms
+23-02-2026 00:08:03.548 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 00:08:03.598 [16] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:08:03.694 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 00:08:08.879 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (133ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 00:08:09.400 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:08:09.999 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 00:08:10.067 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:08:10.845 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (301ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:08:11.021 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:08:11.108 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (57ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:08:21.244 [12] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400 >>>[100000000170446820271130                                                         ]<<< Longitud:81
+23-02-2026 00:09:44.464 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 00:09:44.598 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 00:09:44.839 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 00:09:44.843 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 00:09:44.846 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 00:09:46.045 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 00:09:46.930 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 897.5503ms
+23-02-2026 00:09:46.954 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 00:09:46.954 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 00:09:47.006 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 52.5028ms
+23-02-2026 00:09:47.086 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 132.3657ms
+23-02-2026 00:09:47.261 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 00:09:47.297 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.3662ms
+23-02-2026 00:09:55.905 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 00:09:55.963 [9] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:09:56.047 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 00:10:02.407 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (116ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 00:10:02.958 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:10:03.640 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 00:10:03.711 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:10:04.159 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (165ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:10:04.321 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:10:04.403 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (64ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:10:10.556 [14] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400 >>>[100000000170446820271130                                                         ]<<< Longitud:81
+23-02-2026 00:11:11.487 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 00:11:11.625 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 00:11:11.804 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 00:11:11.812 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 00:11:11.821 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 00:11:12.744 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 00:11:13.705 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 00:11:13.705 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 00:11:13.722 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 993.0028ms
+23-02-2026 00:11:13.745 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 40.4561ms
+23-02-2026 00:11:13.829 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 125.8122ms
+23-02-2026 00:11:13.900 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 00:11:13.934 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.4246ms
+23-02-2026 00:11:22.360 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 00:11:22.421 [17] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:11:22.610 [17] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 00:11:28.664 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (192ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 00:11:29.269 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:11:29.868 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 00:11:29.960 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:11:30.448 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (178ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:11:30.698 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:11:30.780 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (57ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:44:12.098 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 00:44:12.247 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 00:44:12.500 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 00:44:12.580 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 00:44:12.585 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 00:44:13.485 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 00:44:14.472 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 00:44:14.472 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 00:44:14.474 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 1007.1601ms
+23-02-2026 00:44:14.553 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 80.9868ms
+23-02-2026 00:44:14.644 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 173.0771ms
+23-02-2026 00:44:14.728 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 00:44:14.755 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.3602ms
+23-02-2026 00:44:28.738 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 00:44:28.768 [10] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:44:28.891 [10] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 00:44:33.519 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (116ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 00:44:34.011 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:44:34.573 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (91ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 00:44:34.646 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:44:35.162 [19] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (214ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:44:35.365 [19] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (70ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:44:35.450 [19] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:44:38.151 [19] [Error] reposicion_pin.Repository.AS400Repository - Error enviando trama en AS400
+System.Data.Odbc.OdbcException (0x80131937): ERROR [42S02] [IBM][Controlador ODBC de System i Access][DB2 para i5/OS]SQL0204 - REIMQ07RC en BPPGM de tipo *N no encontrado.
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, SQLRETURN retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteNonQuery()
+   at System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at reposicion_pin.Repository.AS400Repository.EjecutarProgramaAsync(AS400RequestDto request) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin\Repository\AS400Repository.cs:line 71
+23-02-2026 00:44:38.326 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:44:38.392 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 00:44:38.420 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 9499.7083ms
+23-02-2026 00:44:38.425 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:44:38.450 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 200 null application/json; charset=utf-8 9712.0653ms
+23-02-2026 00:48:49.677 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 00:48:49.821 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 00:48:50.019 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 00:48:50.025 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 00:48:50.032 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 00:48:51.311 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 00:48:52.214 [15] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 00:48:52.214 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 00:48:52.219 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 925.6067ms
+23-02-2026 00:48:52.242 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 28.3699ms
+23-02-2026 00:48:52.300 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 85.8022ms
+23-02-2026 00:48:52.351 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 00:48:52.384 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.6953ms
+23-02-2026 00:49:02.121 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 00:49:02.159 [9] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:49:02.281 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 00:49:09.449 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (120ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 00:49:09.938 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:49:10.597 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 00:49:10.788 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:49:11.369 [15] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (231ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:49:11.653 [15] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:49:11.948 [13] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (69ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:49:14.751 [12] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+23-02-2026 00:49:14.755 [12] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130                                                         
+23-02-2026 00:49:14.817 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:49:14.868 [12] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 00:49:14.904 [12] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 12604.4013ms
+23-02-2026 00:49:14.916 [12] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:49:14.953 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 200 null application/json; charset=utf-8 12832.1061ms
+23-02-2026 00:50:16.693 [20] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 00:50:16.713 [20] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:50:16.726 [20] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 00:50:16.863 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 00:50:16.934 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:50:17.004 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 00:50:17.083 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 00:50:17.181 [15] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (59ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:50:17.251 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:50:17.325 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (58ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 00:50:47.237 [20] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+23-02-2026 00:51:46.407 [20] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130                                                         
+23-02-2026 00:51:54.771 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (58ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 00:51:57.745 [20] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 00:51:59.537 [20] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 102790.2696ms
+23-02-2026 00:51:59.545 [20] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 00:51:59.553 [20] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 200 null application/json; charset=utf-8 102856.7305ms
+23-02-2026 01:01:07.435 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 01:01:07.558 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 01:01:07.727 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 01:01:07.733 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 01:01:07.738 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 01:01:08.402 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 01:01:09.384 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 01:01:09.385 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 01:01:09.413 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 1027.0618ms
+23-02-2026 01:01:09.437 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 53.1232ms
+23-02-2026 01:01:09.530 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 145.9158ms
+23-02-2026 01:01:09.588 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 01:01:09.614 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.3139ms
+23-02-2026 01:01:38.170 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 252
+23-02-2026 01:01:38.211 [16] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 01:01:38.333 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 01:01:42.256 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (122ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 01:01:42.751 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:01:43.265 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 01:01:43.330 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:01:43.788 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (218ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 01:01:43.860 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 01:01:43.894 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 5529.7367ms
+23-02-2026 01:01:43.919 [16] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 01:01:43.945 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 200 null application/json; charset=utf-8 5775.1937ms
+23-02-2026 01:02:36.024 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 01:02:36.049 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 01:02:36.060 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 01:02:36.178 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 01:02:36.264 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:02:36.333 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 01:02:36.391 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:02:36.546 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (66ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:02:37.239 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 01:02:37.330 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (63ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:03:12.169 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 01:03:12.344 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 01:03:12.591 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 01:03:12.595 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 01:03:12.602 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 01:03:13.224 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 01:03:14.229 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 01:03:14.230 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 01:03:14.230 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 1031.9208ms
+23-02-2026 01:03:14.345 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 84.5213ms
+23-02-2026 01:03:14.414 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 185.0977ms
+23-02-2026 01:03:14.485 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 01:03:14.516 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.1213ms
+23-02-2026 01:03:27.657 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 01:03:27.707 [12] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 01:03:27.796 [12] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 01:03:32.905 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (175ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 01:03:33.429 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:03:34.009 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 01:03:34.077 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:03:34.592 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (151ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:03:34.773 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 01:03:34.844 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:03:43.948 [7] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+23-02-2026 01:09:04.422 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 01:09:04.546 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 01:09:05.038 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 01:09:05.046 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 01:09:05.055 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 01:09:05.709 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 01:09:06.673 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 981.4996ms
+23-02-2026 01:09:06.680 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 01:09:06.680 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 01:09:06.714 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 33.9332ms
+23-02-2026 01:09:06.807 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 127.0469ms
+23-02-2026 01:09:06.855 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 01:09:06.884 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.1341ms
+23-02-2026 01:09:15.042 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 01:09:15.080 [12] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 01:09:15.285 [12] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 01:09:20.213 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (313ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 01:09:21.750 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:09:23.443 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 01:09:23.533 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:09:25.051 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (448ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:09:26.845 [13] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 01:09:26.921 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (58ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:09:34.498 [12] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+23-02-2026 01:10:13.365 [12] [Error] reposicion_pin.Repository.AS400Repository - Error general AS400
+System.OverflowException: Arithmetic operation resulted in an overflow.
+   at System.IntPtr.ToInt32()
+   at System.Data.Odbc.SQLLEN.op_Implicit(SQLLEN value)
+   at System.Data.Odbc.OdbcDataReader.FirstResult()
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteNonQuery()
+   at System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at reposicion_pin.Repository.AS400Repository.EjecutarProgramaAsync(AS400RequestDto request) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin\Repository\AS400Repository.cs:line 48
+23-02-2026 01:10:13.517 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 01:10:13.566 [12] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 01:10:13.606 [12] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 58294.9779ms
+23-02-2026 01:10:13.623 [12] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 01:10:13.663 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 200 null application/json; charset=utf-8 58621.0457ms
+23-02-2026 01:13:38.293 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 01:13:38.417 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 01:13:38.861 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 01:13:38.865 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 01:13:38.867 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 01:13:39.536 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 01:13:40.570 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 01:13:40.571 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 01:13:40.572 [11] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 1062.1609ms
+23-02-2026 01:13:40.617 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 45.7983ms
+23-02-2026 01:13:40.715 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 145.8553ms
+23-02-2026 01:13:40.785 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 01:13:40.816 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.0068ms
+23-02-2026 01:13:49.406 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 01:13:49.447 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 01:13:49.543 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 01:13:55.968 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (156ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 01:13:56.443 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:13:57.000 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 01:13:57.066 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:13:57.575 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (157ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:13:57.897 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (200ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 01:13:57.976 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (64ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:14:18.993 [18] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+23-02-2026 01:14:48.510 [18] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 100000000170446820271130                                                         
+23-02-2026 01:14:54.706 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (75ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 01:14:58.145 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 01:15:00.084 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 70514.4126ms
+23-02-2026 01:15:00.113 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 01:15:00.140 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 200 null application/json; charset=utf-8 70733.898ms
+23-02-2026 01:25:44.364 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 01:25:44.600 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 01:25:44.837 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 01:25:44.843 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 01:25:44.847 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 01:25:45.493 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 01:25:46.310 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 01:25:46.310 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 01:25:46.314 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 837.401ms
+23-02-2026 01:25:46.333 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 22.9785ms
+23-02-2026 01:25:46.531 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 220.8708ms
+23-02-2026 01:25:46.591 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 01:25:46.617 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.8044ms
+23-02-2026 01:26:13.418 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 289
+23-02-2026 01:26:13.444 [9] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 01:26:13.554 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 01:26:19.966 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (104ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 01:26:20.573 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:26:21.201 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 01:26:21.288 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:26:21.877 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (175ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:26:22.053 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 01:26:22.138 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:26:29.554 [17] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+23-02-2026 01:45:03.046 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 01:45:03.246 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 01:45:03.411 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 01:45:03.421 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 01:45:03.431 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 01:45:03.989 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 01:45:04.920 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 946.9276ms
+23-02-2026 01:45:04.923 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 01:45:04.923 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 01:45:04.958 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 35.2026ms
+23-02-2026 01:45:05.046 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 122.6897ms
+23-02-2026 01:45:05.132 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 01:45:05.265 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 132.931ms
+23-02-2026 01:45:14.422 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 01:45:14.460 [9] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 01:45:14.623 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 01:45:22.165 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (187ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 01:45:22.996 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:45:23.720 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 01:45:23.796 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 01:45:24.389 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (184ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:45:24.570 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (61ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 01:45:24.671 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (66ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 01:45:26.647 [9] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada: 100000000170446820271130                                                         
+23-02-2026 01:45:27.622 [9] [Error] reposicion_pin.Repository.AS400Repository - Error ODBC AS400 SP
+System.Data.Odbc.OdbcException (0x80131937): ERROR [42000] [IBM][Controlador ODBC de System i Access][DB2 para i5/OS]SQL0104 - Símbolo ( no válido. Símbolos válidos: AS CL ID IN TO ASC END FOR KEY LAG LOG NEW OFF OLD OUT COPY DATA.
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, SQLRETURN retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Odbc.OdbcCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at reposicion_pin.Repository.AS400Repository.EjecutarProgramaAsync(AS400RequestDto request) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin\Repository\AS400Repository.cs:line 49
+23-02-2026 01:45:27.944 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (61ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 01:45:28.150 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 01:45:28.294 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 13646.6153ms
+23-02-2026 01:45:28.302 [9] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 01:45:28.333 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 200 null application/json; charset=utf-8 13910.7606ms
+23-02-2026 08:48:53.623 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 08:48:53.764 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 08:48:53.958 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 08:48:53.962 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 08:48:53.968 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 08:48:56.457 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 08:48:57.770 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 1331.8985ms
+23-02-2026 08:48:57.953 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 08:48:57.957 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 08:48:58.100 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 144.3444ms
+23-02-2026 08:48:58.337 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 380.3919ms
+23-02-2026 08:48:59.041 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 08:48:59.086 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.1236ms
+23-02-2026 08:49:06.216 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 08:49:06.258 [16] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 08:49:06.360 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 08:49:18.015 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 08:49:18.596 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 08:49:19.154 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 08:49:19.232 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 08:49:20.074 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (234ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 08:49:20.275 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 08:49:20.363 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 08:52:03.688 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 08:52:03.815 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 08:52:03.983 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 08:52:03.987 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 08:52:03.992 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 08:52:05.062 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 08:52:05.991 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 08:52:05.991 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 08:52:05.996 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 954.4584ms
+23-02-2026 08:52:06.018 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 26.8311ms
+23-02-2026 08:52:06.107 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 115.9372ms
+23-02-2026 08:52:06.165 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 08:52:06.204 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.7898ms
+23-02-2026 08:52:13.970 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 08:52:14.016 [14] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 08:52:14.158 [14] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 08:52:18.538 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (114ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 08:52:19.611 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 08:52:20.166 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 08:52:20.243 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 08:52:20.750 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (168ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 08:52:20.950 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 08:52:21.023 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (58ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 08:55:34.407 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 08:55:34.551 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 08:55:34.717 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 08:55:34.725 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 08:55:34.732 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 08:55:35.373 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 08:55:36.503 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 08:55:36.503 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 08:55:36.568 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 1209.0545ms
+23-02-2026 08:55:36.581 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 77.4409ms
+23-02-2026 08:55:36.706 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 202.9451ms
+23-02-2026 08:55:36.772 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 08:55:36.800 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.3659ms
+23-02-2026 08:55:44.380 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 08:55:44.445 [10] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 08:55:44.601 [10] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 08:55:49.170 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 08:55:49.663 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 08:55:50.274 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 08:55:50.358 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 08:55:50.938 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (261ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 08:55:51.138 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 08:55:51.221 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (64ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:00:57.466 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 09:00:57.593 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 09:00:57.772 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 09:00:57.783 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 09:00:57.794 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 09:00:58.206 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 09:00:59.212 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 09:00:59.215 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 09:00:59.215 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 1022.848ms
+23-02-2026 09:00:59.242 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 28.6747ms
+23-02-2026 09:00:59.324 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 109.4512ms
+23-02-2026 09:00:59.378 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 09:00:59.405 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.7292ms
+23-02-2026 09:01:06.603 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 09:01:06.645 [17] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 09:01:06.737 [17] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 09:01:10.939 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (122ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 09:01:11.454 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:01:12.020 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 09:01:12.112 [17] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:01:12.628 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (192ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:01:12.824 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 09:01:12.928 [7] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (74ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:01:25.016 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 09:01:25.958 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 942.0972ms
+23-02-2026 09:01:26.009 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 09:01:26.009 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 09:01:26.057 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 48.6357ms
+23-02-2026 09:01:26.086 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.2339ms
+23-02-2026 09:01:26.194 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 09:01:26.941 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 746.9293ms
+23-02-2026 09:01:56.967 [18] [Error] reposicion_pin.Repository.AS400Repository - Error enviando trama en AS400
+System.Data.Odbc.OdbcException (0x80131937): ERROR [42S02] [IBM][Controlador ODBC de System i Access][DB2 para i5/OS]SQL0204 - REIMQ07RC en BPPGM de tipo *N no encontrado.
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, SQLRETURN retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteNonQuery()
+   at System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at reposicion_pin.Repository.AS400Repository.EjecutarProgramaAsync(AS400RequestDto request)
+23-02-2026 09:01:57.101 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 09:01:57.152 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 09:01:57.195 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 50434.5863ms
+23-02-2026 09:01:57.205 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 09:01:57.232 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 499 null application/json; charset=utf-8 50629.4199ms
+23-02-2026 09:02:06.211 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 09:02:06.229 [18] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 09:02:06.260 [18] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 09:02:06.334 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 09:02:06.394 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:02:06.463 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 09:02:06.521 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:02:06.640 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (59ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:02:06.698 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 09:02:06.817 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (59ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:04:10.924 [18] [Error] reposicion_pin.Repository.AS400Repository - Error enviando trama en AS400
+System.Data.Odbc.OdbcException (0x80131937): ERROR [42S02] [IBM][Controlador ODBC de System i Access][DB2 para i5/OS]SQL0204 - REIMQ07RC en BPPGM de tipo *N no encontrado.
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, SQLRETURN retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteNonQuery()
+   at System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at reposicion_pin.Repository.AS400Repository.EjecutarProgramaAsync(AS400RequestDto request)
+23-02-2026 09:04:35.745 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 09:04:35.883 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 09:04:36.068 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 09:04:36.077 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 09:04:36.093 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 09:04:37.015 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 09:04:37.949 [15] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 09:04:37.949 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 09:04:37.958 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 956.1433ms
+23-02-2026 09:04:37.989 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 39.7971ms
+23-02-2026 09:04:38.067 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 118.1829ms
+23-02-2026 09:04:38.134 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 09:04:38.164 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.8616ms
+23-02-2026 09:04:47.811 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 09:04:47.848 [16] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 09:04:47.972 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 09:04:52.646 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (112ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 09:04:53.225 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:04:53.759 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 09:04:53.869 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:04:54.417 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (202ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:04:54.620 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 09:04:54.708 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (60ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:05:10.174 [16] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+23-02-2026 09:05:43.457 [16] [Error] reposicion_pin.Repository.AS400Repository - Error enviando trama en AS400
+System.Data.Odbc.OdbcException (0x80131937): ERROR [42S02] [IBM][Controlador ODBC de System i Access][DB2 para i5/OS]SQL0204 - REIMQ07RC en BPPGM de tipo *N no encontrado.
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, SQLRETURN retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteNonQuery()
+   at System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at reposicion_pin.Repository.AS400Repository.EjecutarProgramaAsync(AS400RequestDto request) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin\Repository\AS400Repository.cs:line 70
+23-02-2026 09:05:43.604 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 09:05:43.677 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 09:05:43.752 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 55753.8385ms
+23-02-2026 09:05:43.768 [16] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 09:05:43.811 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 200 null application/json; charset=utf-8 55999.9978ms
+23-02-2026 09:08:07.685 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 09:08:07.850 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 09:08:08.269 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 09:08:08.278 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 09:08:08.283 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 09:08:09.138 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 09:08:10.047 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 933.9431ms
+23-02-2026 09:08:10.049 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 09:08:10.049 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 09:08:10.079 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 29.8414ms
+23-02-2026 09:08:10.168 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 119.5584ms
+23-02-2026 09:08:10.226 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 09:08:10.251 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.0513ms
+23-02-2026 09:08:19.776 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 09:08:19.843 [10] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 09:08:19.972 [10] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 09:08:26.807 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (167ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 09:08:28.843 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (74ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:08:30.278 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 09:08:30.376 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:08:30.997 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (157ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:08:31.190 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 09:08:31.276 [10] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (63ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:08:43.737 [9] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+23-02-2026 09:26:19.385 [9] [Error] reposicion_pin.Repository.AS400Repository - Error enviando trama en AS400
+System.Data.Odbc.OdbcException (0x80131937): ERROR [42S02] [IBM][Controlador ODBC de System i Access][DB2 para i5/OS]SQL0204 - REIMQ07RC en BPPGM de tipo *N no encontrado.
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, SQLRETURN retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteNonQuery()
+   at System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at reposicion_pin.Repository.AS400Repository.EjecutarProgramaAsync(AS400RequestDto request)
+23-02-2026 09:26:19.930 [9] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (93ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 09:26:19.980 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 09:26:20.017 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 1079994.6513ms
+23-02-2026 09:26:20.023 [9] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 09:26:20.056 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 200 null application/json; charset=utf-8 1080269.7412ms
+23-02-2026 09:26:20.604 [23] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 09:26:20.719 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 115.351ms
+23-02-2026 09:26:20.768 [17] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 09:26:20.770 [23] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 09:26:20.816 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 48.2553ms
+23-02-2026 09:26:20.925 [20] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 155.4179ms
+23-02-2026 09:26:21.261 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 09:26:21.277 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.3458ms
+23-02-2026 09:26:54.461 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 09:26:54.601 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 09:26:54.749 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 09:26:54.755 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 09:26:54.777 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 09:26:55.405 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 09:26:56.337 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 946.3304ms
+23-02-2026 09:26:56.340 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 09:26:56.340 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 09:26:56.373 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 33.2635ms
+23-02-2026 09:26:56.454 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 113.5994ms
+23-02-2026 09:26:56.527 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 09:26:56.551 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.087ms
+23-02-2026 09:27:07.785 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 09:27:07.913 [16] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 09:27:08.040 [16] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 09:27:12.273 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (114ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 09:27:12.796 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:27:13.745 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 09:27:13.820 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:27:14.343 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (190ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:27:14.526 [12] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 09:27:14.608 [16] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (57ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:27:21.634 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 09:27:21.697 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 62.8874ms
+23-02-2026 09:27:21.761 [18] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 09:27:21.764 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 09:27:22.779 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 1017.5437ms
+23-02-2026 09:27:23.014 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1250.3088ms
+23-02-2026 09:27:23.159 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 09:27:23.221 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 61.6136ms
+23-02-2026 09:27:32.155 [7] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 0
+23-02-2026 09:29:13.248 [7] [Error] reposicion_pin.Repository.AS400Repository - Error enviando trama en AS400
+System.Data.Odbc.OdbcException (0x80131937): ERROR [42S02] [IBM][Controlador ODBC de System i Access][DB2 para i5/OS]SQL0204 - REIMQ07RC en BPPGM de tipo *N no encontrado.
+   at System.Data.Odbc.OdbcConnection.HandleError(OdbcHandle hrHandle, SQLRETURN retcode)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader, Object[] methodArguments, SQL_API odbcApiMethod)
+   at System.Data.Odbc.OdbcCommand.ExecuteReaderObject(CommandBehavior behavior, String method, Boolean needReader)
+   at System.Data.Odbc.OdbcCommand.ExecuteNonQuery()
+   at System.Data.Common.DbCommand.ExecuteNonQueryAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at reposicion_pin.Repository.AS400Repository.EjecutarProgramaAsync(AS400RequestDto request)
+23-02-2026 09:29:13.428 [15] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 09:29:13.486 [15] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 09:29:13.530 [15] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 125435.0243ms
+23-02-2026 09:29:13.539 [15] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 09:29:13.559 [15] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 499 null application/json; charset=utf-8 125769.9489ms
+23-02-2026 09:29:28.095 [15] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 09:29:28.150 [15] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 09:29:28.193 [15] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 09:29:28.328 [15] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 09:29:28.395 [15] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:29:28.474 [15] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 09:29:28.531 [15] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 09:29:28.784 [15] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (70ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:29:28.883 [15] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (55ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 09:29:29.542 [15] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (63ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 09:29:42.148 [15] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 0
+23-02-2026 12:15:02.904 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 12:15:03.045 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 12:15:03.236 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 12:15:03.240 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 12:15:03.244 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 12:15:04.264 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger - null null
+23-02-2026 12:15:05.056 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger - 301 null null 807.8624ms
+23-02-2026 12:15:05.064 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 12:15:05.297 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 232.7675ms
+23-02-2026 12:15:05.303 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/swagger-ui.css - null null
+23-02-2026 12:15:05.304 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 12:15:05.304 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/swagger-ui-standalone-preset.js - null null
+23-02-2026 12:15:05.304 [15] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/swagger-ui-bundle.js - null null
+23-02-2026 12:15:05.379 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 75.0793ms
+23-02-2026 12:15:05.432 [10] [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+23-02-2026 12:15:05.432 [9] [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+23-02-2026 12:15:05.451 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 147.1196ms
+23-02-2026 12:15:05.455 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/swagger-ui.css - 200 152034 text/css 152.1715ms
+23-02-2026 12:15:05.460 [20] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 12:15:05.482 [12] [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+23-02-2026 12:15:05.494 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 190.772ms
+23-02-2026 12:15:05.604 [20] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 144.8364ms
+23-02-2026 12:15:05.681 [20] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 12:15:05.719 [20] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 37.7005ms
+23-02-2026 12:15:13.990 [20] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 12:15:14.020 [20] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 12:15:14.112 [20] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 12:15:18.508 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (125ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 12:15:19.015 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 12:15:19.655 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 12:15:19.727 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 12:15:20.224 [19] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (171ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 12:15:20.404 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 12:15:20.479 [20] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (62ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 12:15:31.923 [20] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+23-02-2026 12:16:45.864 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+23-02-2026 12:16:45.981 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+23-02-2026 12:16:46.452 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+23-02-2026 12:16:46.455 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+23-02-2026 12:16:46.458 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+23-02-2026 12:16:46.909 [11] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+23-02-2026 12:16:47.782 [11] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+23-02-2026 12:16:47.782 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+23-02-2026 12:16:47.787 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 891.0673ms
+23-02-2026 12:16:47.802 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 21.1172ms
+23-02-2026 12:16:47.894 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 112.5691ms
+23-02-2026 12:16:47.979 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+23-02-2026 12:16:48.001 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.0183ms
+23-02-2026 12:16:56.471 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - application/json 288
+23-02-2026 12:16:56.510 [14] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 12:16:56.592 [14] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "GenerarPin", controller = "ReposicionPin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto]] GenerarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+23-02-2026 12:17:00.214 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (109ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigBiMovil
+23-02-2026 12:17:00.675 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 12:17:01.151 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+EXEC usp_ObtenerConfigEmail
+23-02-2026 12:17:01.221 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[IdRow], [p].[Ambiente], [p].[Correo], [p].[Estado], [p].[IdOperador], [p].[Telefono]
+FROM [ParamAmbiente] AS [p]
+WHERE [p].[Estado] = 1
+ORDER BY [p].[IdRow]
+23-02-2026 12:17:01.674 [18] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (154ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 12:17:01.863 [13] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (49ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 12:17:01.936 [13] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (59ms) [Parameters=[@cif='?' (Size = 4000), @ultimosDigitos_endswith='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [t].[Id], [t].[CIF], [t].[EquivalenteTC], [t].[EstadoHabilitar], [t].[EstadoTarjeta], [t].[FechaFinVigencia], [t].[NumeroTarjeta]
+FROM [Tarjetas] AS [t]
+WHERE [t].[CIF] = @cif AND [t].[EquivalenteTC] LIKE @ultimosDigitos_endswith ESCAPE N'\'
+23-02-2026 12:17:25.376 [11] [Information] reposicion_pin.Repository.AS400Repository - Trama enviada AS400: 100000000170446820271130                                                         
+23-02-2026 12:17:39.991 [11] [Information] reposicion_pin.Repository.AS400Repository - Trama respuesta AS400: 1000000001704468202711301721                                                     
+23-02-2026 12:18:39.635 [14] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (51ms) [Parameters=[@codigo='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Descripcion]
+FROM [CatalogoRespuestas] AS [c]
+WHERE [c].[Codigo] = @codigo
+23-02-2026 12:19:12.274 [22] [Information] reposicion_pin.Repository.EnvioEmailRepository - Correo enviado Ref:1771870719651 Destino:pamelas@banpais.hn
+23-02-2026 12:19:12.732 [23] [Information] Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (52ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [BandejaEnvioEmail] ([Correo], [CuerpoCorreo], [DescripcionEstado], [Estado], [FechaFinal], [FechaInicio], [MailFrom], [MailSubject], [NumeroTarjeta], [Referencia], [TipoTarjeta])
+OUTPUT INSERTED.[IdRow]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+23-02-2026 12:19:12.882 [23] [Error] Microsoft.EntityFrameworkCore.Update - An exception occurred in the database while saving changes for context type 'reposicion_pin.Infrastructure.Data.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Referencia'. Truncated value: '177187071965'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5a4fadcd-cb28-4d33-8195-c7e7326eaf8f
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Referencia'. Truncated value: '177187071965'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5a4fadcd-cb28-4d33-8195-c7e7326eaf8f
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+23-02-2026 12:19:13.116 [23] [Error] reposicion_pin.Service.ReposicionPinService - Error registrando resultado Email
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): String or binary data would be truncated in table 'ReposicionPinTC.dbo.BandejaEnvioEmail', column 'Referencia'. Truncated value: '177187071965'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5a4fadcd-cb28-4d33-8195-c7e7326eaf8f
+Error Number:2628,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at reposicion_pin.Repository.BandejaEnvioEmailRepository.AddAsync(BandejaEnvioEmailModel entity) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin\Repository\BandejaEnvioEmailRepository.cs:line 30
+   at reposicion_pin.Service.ReposicionPinService.InsertarRegistroEnvioEmailAsync(TarjetaModel tarjeta, ReposicionPinRequestDto request, String referencia, Int32 codigo, String mensaje) in C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin\Service\ReposicionPinService.cs:line 279
+23-02-2026 12:19:13.186 [23] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+23-02-2026 12:19:13.216 [23] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin) in 136629.3213ms
+23-02-2026 12:19:13.222 [23] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.GenerarPin (reposicion_pin)'
+23-02-2026 12:19:13.248 [23] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin/generar-pin - 200 null application/json; charset=utf-8 136808.2812ms

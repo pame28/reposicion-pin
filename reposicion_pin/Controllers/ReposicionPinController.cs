@@ -1,0 +1,49 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using reposicion_pin.DTOs;
+using reposicion_pin.Service;
+
+namespace reposicion_pin.Controllers
+{
+    [Route("api")]
+    [ApiController]
+    public class ReposicionPinController : ControllerBase
+    {
+        private readonly ReposicionPinService _service;
+        private readonly ILogger<ReposicionPinController> _logger;
+
+        public ReposicionPinController(
+            ReposicionPinService service,
+            ILogger<ReposicionPinController> logger)
+        {
+            _service = service;
+            _logger = logger;
+        }
+
+        [HttpPost]
+        [Route("reposicion-pin")]
+        public async Task<ActionResult<ReposicionPinResponseDto>> GenerarPin([FromBody] ReposicionPinRequestDto request)
+        {
+            try
+            {
+                _logger.LogInformation("REQUEST reposicion-pin: {Request}",
+                    System.Text.Json.JsonSerializer.Serialize(request));
+
+                var response = await _service.ReposicionPinAsync(request);
+
+                _logger.LogInformation("RESPONSE reposicion-pin: {Response}",
+                    System.Text.Json.JsonSerializer.Serialize(response));
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error inesperado en GenerarPin");
+                return Ok(new ReposicionPinResponseDto
+                {
+                    CodigoInt = 99,
+                    Descripcion = $"Error inesperado: {ex.Message}"
+                });
+            }
+        }
+    }
+}

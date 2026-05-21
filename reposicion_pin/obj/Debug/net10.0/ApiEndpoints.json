@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "reposicion_pin.Controllers.ReposicionPinController",
+    "Method": "GenerarPin",
+    "RelativePath": "api/reposicion-pin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "reposicion_pin.DTOs.ReposicionPinRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "reposicion_pin.DTOs.ReposicionPinResponseDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

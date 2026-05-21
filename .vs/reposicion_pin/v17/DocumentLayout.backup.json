@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\80730.HN\\Desktop\\Projects\\BH-24138 Procesador Regional\\Microservicios\\Reposicion PIN\\api_reposicion_pin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{769DB26D-28AC-3DB6-AC4F-884BD0EC3305}|reposicion_pin\\reposicion_pin.csproj|c:\\users\\80730.hn\\desktop\\projects\\bh-24138 procesador regional\\microservicios\\reposicion pin\\api_reposicion_pin\\reposicion_pin\\repository\\envioemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{769DB26D-28AC-3DB6-AC4F-884BD0EC3305}|reposicion_pin\\reposicion_pin.csproj|solutionrelative:reposicion_pin\\repository\\envioemailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{769DB26D-28AC-3DB6-AC4F-884BD0EC3305}|reposicion_pin\\reposicion_pin.csproj|c:\\users\\80730.hn\\desktop\\projects\\bh-24138 procesador regional\\microservicios\\reposicion pin\\api_reposicion_pin\\reposicion_pin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{769DB26D-28AC-3DB6-AC4F-884BD0EC3305}|reposicion_pin\\reposicion_pin.csproj|solutionrelative:reposicion_pin\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnvioEmailRepository.cs",
+              "DocumentMoniker": "C:\\Users\\80730.HN\\Desktop\\Projects\\BH-24138 Procesador Regional\\Microservicios\\Reposicion PIN\\api_reposicion_pin\\reposicion_pin\\Repository\\EnvioEmailRepository.cs",
+              "RelativeDocumentMoniker": "reposicion_pin\\Repository\\EnvioEmailRepository.cs",
+              "ToolTip": "C:\\Users\\80730.HN\\Desktop\\Projects\\BH-24138 Procesador Regional\\Microservicios\\Reposicion PIN\\api_reposicion_pin\\reposicion_pin\\Repository\\EnvioEmailRepository.cs",
+              "RelativeToolTip": "reposicion_pin\\Repository\\EnvioEmailRepository.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAwJAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T17:07:44.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\80730.HN\\Desktop\\Projects\\BH-24138 Procesador Regional\\Microservicios\\Reposicion PIN\\api_reposicion_pin\\reposicion_pin\\appsettings.json",
+              "RelativeDocumentMoniker": "reposicion_pin\\appsettings.json",
+              "ToolTip": "C:\\Users\\80730.HN\\Desktop\\Projects\\BH-24138 Procesador Regional\\Microservicios\\Reposicion PIN\\api_reposicion_pin\\reposicion_pin\\appsettings.json",
+              "RelativeToolTip": "reposicion_pin\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-04T20:11:45.352Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

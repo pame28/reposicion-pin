@@ -1,0 +1,1007 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Compilador de Microsoft (R) Visual C#",
+        "version": "5.0.0.0",
+        "fileVersion": "5.0.0-2.25569.105 (fad253f5)",
+        "semanticVersion": "5.0.0",
+        "language": "es-ES"
+      },
+      "results": [
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"BandejaEnvioSms\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 44,
+                  "endLine": 14,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"BandejaEnvioEmail\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 46,
+                  "endLine": 18,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"usp_ObtenerConfigBiMovil\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 56,
+                  "endLine": 21,
+                  "endColumn": 80
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"usp_ObtenerConfigEmail\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 54,
+                  "endLine": 23,
+                  "endColumn": 76
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"ParamAmbiente\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/AppDbContext.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 50,
+                  "endLine": 24,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"NumeroTarjeta\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"PIN\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"ContenidoSMS\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"ContenidoCorreo\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 38
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Correo\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 23,
+                  "endLine": 9,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 23,
+                  "endLine": 9,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Celular\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 23,
+                  "endLine": 10,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 23,
+                  "endLine": 10,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"Referencia\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 23,
+                  "endLine": 11,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 23,
+                  "endLine": 11,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "El elemento propiedad \"TipoTarjeta\" que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required'\"o declarar el propiedad como un valor que acepta valores NULL.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 23,
+                  "endLine": 13,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/DTOs/NotificacionDto.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 23,
+                  "endLine": 13,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1847",
+          "level": "note",
+          "message": "Use 'string.Contains(char)' en lugar de 'string.Contains(string)' al buscar un solo carácter",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Service/TarjetaValidationService.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 95,
+                  "endLine": 53,
+                  "endColumn": 98
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Service/NotificacionService.cs",
+                "region": {
+                  "startLine": 185,
+                  "startColumn": 40,
+                  "endLine": 185,
+                  "endColumn": 107
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA2254",
+          "level": "note",
+          "message": "La plantilla de mensaje de registro no debe variar entre las llamadas a \"LoggerExtensions.LogWarning(ILogger, Exception?, string?, params object?[])\"",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Service/NotificacionService.cs",
+                "region": {
+                  "startLine": 185,
+                  "startColumn": 40,
+                  "endLine": 185,
+                  "endColumn": 107
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Service/TarjetaValidationService.cs",
+                "region": {
+                  "startLine": 97,
+                  "startColumn": 17,
+                  "endLine": 97,
+                  "endColumn": 98
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1845",
+          "level": "note",
+          "message": "Use la cadena basada en 'string.Concat' y \"AsSpan\" en lugar de 'Substring'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/AS400Repository.cs",
+                "region": {
+                  "startLine": 170,
+                  "startColumn": 20,
+                  "endLine": 172,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/DBHelper.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 17,
+                  "endLine": 51,
+                  "endColumn": 130
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/DBHelper.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 17,
+                  "endLine": 68,
+                  "endColumn": 116
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Infrastructure/Data/DBHelper.cs",
+                "region": {
+                  "startLine": 74,
+                  "startColumn": 17,
+                  "endLine": 74,
+                  "endColumn": 100
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/AS400Repository.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 17,
+                  "endLine": 47,
+                  "endColumn": 78
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/AS400Repository.cs",
+                "region": {
+                  "startLine": 69,
+                  "startColumn": 17,
+                  "endLine": 69,
+                  "endColumn": 111
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/EnvioSmsRepository.cs",
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 21,
+                  "endLine": 67,
+                  "endColumn": 89
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/EnvioSmsRepository.cs",
+                "region": {
+                  "startLine": 73,
+                  "startColumn": 21,
+                  "endLine": 73,
+                  "endColumn": 80
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/EnvioSmsRepository.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 17,
+                  "endLine": 79,
+                  "endColumn": 85
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/EnvioSmsRepository.cs",
+                "region": {
+                  "startLine": 81,
+                  "startColumn": 17,
+                  "endLine": 81,
+                  "endColumn": 82
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/EnvioSmsRepository.cs",
+                "region": {
+                  "startLine": 89,
+                  "startColumn": 21,
+                  "endLine": 89,
+                  "endColumn": 107
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/EnvioSmsRepository.cs",
+                "region": {
+                  "startLine": 100,
+                  "startColumn": 17,
+                  "endLine": 108,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/EnvioSmsRepository.cs",
+                "region": {
+                  "startLine": 134,
+                  "startColumn": 17,
+                  "endLine": 136,
+                  "endColumn": 58
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/EnvioSmsRepository.cs",
+                "region": {
+                  "startLine": 142,
+                  "startColumn": 17,
+                  "endLine": 142,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/EnvioEmailRepository.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 17,
+                  "endLine": 81,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1873",
+          "level": "note",
+          "message": "La evaluación de este argumento puede ser costosa e innecesaria si el registro está deshabilitado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/EnvioEmailRepository.cs",
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 17,
+                  "endLine": 89,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "El miembro \"ConfigurarLibraryListAsync\" no tiene acceso a los datos de la instancia y se puede marcar como static.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/80730.HN/Desktop/Projects/BH-24138%20Procesador%20Regional/Microservicios/Reposicion%20PIN/api_reposicion_pin/reposicion_pin/Repository/AS400Repository.cs",
+                "region": {
+                  "startLine": 86,
+                  "startColumn": 28,
+                  "endLine": 86,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA1822": {
+          "id": "CA1822",
+          "shortDescription": "Marcar miembros como static",
+          "fullDescription": "Los miembros que no tienen acceso a datos de instancia o que llaman a métodos de instancia se pueden marcar como static. Después de marcar los métodos como static, el compilador emitirá los sitios de llamada no virtuales para estos miembros. Esto puede proporcionar una mejora apreciable del rendimiento del código sensible al rendimiento.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1822",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1845": {
+          "id": "CA1845",
+          "shortDescription": "Use la cadena basada en 'string.Concat'",
+          "fullDescription": "Es más eficaz usar \"AsSpan\" y \"string.Concat, en lugar de 'Substring' y un operador de concatenación.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1845",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1847": {
+          "id": "CA1847",
+          "shortDescription": "Usar literal de carácter para una búsqueda de caracteres individuales",
+          "fullDescription": "'string.Contains(char)' está disponible como una sobrecarga de mejor rendimiento para la búsqueda de caracteres únicos.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1847",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA1873": {
+          "id": "CA1873",
+          "shortDescription": "Evitar el registro potencialmente costoso",
+          "fullDescription": "En muchas situaciones, el registro se deshabilita o se establece en un nivel de registro que da como resultado una evaluación innecesaria para este argumento.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1873",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CA2254": {
+          "id": "CA2254",
+          "shortDescription": "La plantilla debe ser una expresión estática",
+          "fullDescription": "La plantilla de mensaje de registro no debe variar entre llamadas.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca2254",
+          "properties": {
+            "category": "Usage",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Un campo que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de agregar el modificador \"required\" o declararlo como un valor que acepta valores NULL.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

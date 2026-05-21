@@ -1,0 +1,68 @@
+04-02-2026 23:12:14.475 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+04-02-2026 23:12:14.609 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+04-02-2026 23:12:14.833 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+04-02-2026 23:12:14.845 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+04-02-2026 23:12:14.862 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+04-02-2026 23:12:15.336 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger - null null
+04-02-2026 23:12:16.183 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger - 301 null null 870.3981ms
+04-02-2026 23:12:16.193 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+04-02-2026 23:12:16.469 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/swagger-ui.css - null null
+04-02-2026 23:12:16.474 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+04-02-2026 23:12:16.474 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+04-02-2026 23:12:16.469 [10] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/swagger-ui-bundle.js - null null
+04-02-2026 23:12:16.577 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 102.7114ms
+04-02-2026 23:12:16.469 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/swagger-ui-standalone-preset.js - null null
+04-02-2026 23:12:16.475 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 282.125ms
+04-02-2026 23:12:16.640 [19] [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+04-02-2026 23:12:16.813 [16] [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+04-02-2026 23:12:16.822 [12] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 348.5353ms
+04-02-2026 23:12:16.836 [13] [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+04-02-2026 23:12:16.859 [19] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/swagger-ui.css - 200 152034 text/css 390.2695ms
+04-02-2026 23:12:16.862 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 392.7853ms
+04-02-2026 23:12:16.887 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 417.2948ms
+04-02-2026 23:12:17.063 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+04-02-2026 23:12:17.085 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/favicon-32x32.png - null null
+04-02-2026 23:12:17.138 [16] [Information] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+04-02-2026 23:12:17.147 [16] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/favicon-32x32.png - 200 628 image/png 61.7319ms
+04-02-2026 23:12:17.148 [13] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 85.6413ms
+04-02-2026 23:14:15.104 [3] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin - application/json 258
+04-02-2026 23:14:15.143 [3] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin)'
+04-02-2026 23:14:15.237 [3] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "ReposicionarPin", controller = "ReposicionPin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto] ReposicionarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+04-02-2026 23:14:15.422 [3] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+04-02-2026 23:14:15.449 [3] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin) in 184.0016ms
+04-02-2026 23:14:15.461 [3] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin)'
+04-02-2026 23:14:15.472 [3] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin - 200 null application/json; charset=utf-8 368.2011ms
+04-02-2026 23:24:47.297 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7218
+04-02-2026 23:24:47.474 [2] [Information] Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5260
+04-02-2026 23:24:47.661 [2] [Information] Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+04-02-2026 23:24:47.669 [2] [Information] Microsoft.Hosting.Lifetime - Hosting environment: Development
+04-02-2026 23:24:47.676 [2] [Information] Microsoft.Hosting.Lifetime - Content root path: C:\Users\80730.HN\Desktop\Projects\BH-24138 Procesador Regional\Microservicios\Reposicion PIN\reposicion_pin\reposicion_pin
+04-02-2026 23:24:48.462 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/index.html - null null
+04-02-2026 23:24:49.376 [14] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_vs/browserLink - null null
+04-02-2026 23:24:49.376 [15] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - null null
+04-02-2026 23:24:49.393 [11] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/index.html - 200 null text/html;charset=utf-8 948.1412ms
+04-02-2026 23:24:49.437 [7] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_framework/aspnetcore-browser-refresh.js - 200 16513 application/javascript; charset=utf-8 61.1596ms
+04-02-2026 23:24:49.500 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/_vs/browserLink - 200 null text/javascript; charset=UTF-8 123.9041ms
+04-02-2026 23:24:49.557 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - null null
+04-02-2026 23:24:49.584 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:7218/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.1404ms
+04-02-2026 23:25:53.592 [11] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin - application/json 268
+04-02-2026 23:25:53.640 [11] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin)'
+04-02-2026 23:25:53.720 [11] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "ReposicionarPin", controller = "ReposicionPin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto] ReposicionarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+04-02-2026 23:25:53.921 [11] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+04-02-2026 23:25:54.034 [11] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin) in 216.9138ms
+04-02-2026 23:25:54.156 [11] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin)'
+04-02-2026 23:25:54.375 [11] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin - 200 null application/json; charset=utf-8 785.5434ms
+04-02-2026 23:26:02.669 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin - application/json 268
+04-02-2026 23:26:02.686 [9] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin)'
+04-02-2026 23:26:02.695 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "ReposicionarPin", controller = "ReposicionPin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto] ReposicionarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+04-02-2026 23:26:02.712 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+04-02-2026 23:26:02.724 [9] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin) in 17.6695ms
+04-02-2026 23:26:02.732 [9] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin)'
+04-02-2026 23:26:02.738 [9] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin - 200 null application/json; charset=utf-8 69.571ms
+04-02-2026 23:27:14.353 [22] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 POST https://localhost:7218/api/ReposicionPin - application/json 281
+04-02-2026 23:27:14.367 [22] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin)'
+04-02-2026 23:27:14.374 [22] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Route matched with {action = "ReposicionarPin", controller = "ReposicionPin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[reposicion_pin.DTOs.ReposicionPinResponseDto] ReposicionarPin(reposicion_pin.DTOs.ReposicionPinRequestDto) on controller reposicion_pin.Controllers.ReposicionPinController (reposicion_pin).
+04-02-2026 23:27:14.390 [22] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'reposicion_pin.DTOs.ReposicionPinResponseDto'.
+04-02-2026 23:27:14.400 [22] [Information] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker - Executed action reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin) in 16.8351ms
+04-02-2026 23:27:14.416 [22] [Information] Microsoft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'reposicion_pin.Controllers.ReposicionPinController.ReposicionarPin (reposicion_pin)'
+04-02-2026 23:27:14.423 [22] [Information] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 POST https://localhost:7218/api/ReposicionPin - 200 null application/json; charset=utf-8 70.66ms

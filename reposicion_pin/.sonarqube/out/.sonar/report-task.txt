@@ -1,0 +1,6 @@
+projectKey=BP-REPOSICION-DE-PIN-DE-TC
+serverUrl=https://sonarqube.bi.com.gt
+serverVersion=10.0.0.68432
+dashboardUrl=https://sonarqube.bi.com.gt/dashboard?id=BP-REPOSICION-DE-PIN-DE-TC
+ceTaskId=AZyw5toA75KmQ7o-gryo
+ceTaskUrl=https://sonarqube.bi.com.gt/api/ce/task?id=AZyw5toA75KmQ7o-gryo
